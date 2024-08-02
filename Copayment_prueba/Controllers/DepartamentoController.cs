@@ -26,6 +26,14 @@ namespace Copayment_prueba.Controllers
             return departamentos;
         }
         #endregion
+        #region Crear departamento
+        [HttpPost]
+        [Route("api/departamento/crearDepartamento")]
+        public string crearDepartamento(Departamento parametro)
+        {
+            return _departamentoDAL.crearDepartamento(parametro);
+        }
+        #endregion
         #region Actualizar departamento
         [HttpPost]
         [Route("api/departamento/actualizarDepartamento")]

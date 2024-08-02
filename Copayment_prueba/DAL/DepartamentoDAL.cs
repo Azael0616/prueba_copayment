@@ -75,6 +75,31 @@ namespace Copayment_prueba.DAL
                 return departamentos;
         }
         #endregion
+        #region Crear Departamento
+        public string crearDepartamento(Departamento parametro)
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(Utils.Utils.cadenaConexion()))
+                {
+                    using (MySqlCommand command = new MySqlCommand("crearDepartamento", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;                        
+                        command.Parameters.AddWithValue("@nom", parametro.Nombre);
+                        command.Parameters.AddWithValue("@pago", parametro.Pago_hora);
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                return "Departamento creado correctamente";
+            }
+            catch (Exception ex)
+            {
+                return "Ha ocurrido un error: " + ex.Message.ToString();
+            }
+        }
+        #endregion
         #region Actualizar Departamento
         public string actualizarDepartamento(Departamento parametro)
         {
