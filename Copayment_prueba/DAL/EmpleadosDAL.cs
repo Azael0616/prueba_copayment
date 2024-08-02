@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System.Data.SqlClient;
 using Copayment_prueba.Models;
-using Copayment_prueba.Utils;
-using System.Net;
 
 namespace Copayment_prueba.DAL
 {
     public class EmpleadosDAL
     {
+        #region Obtener empleado
         public Empleado obtenerEmpleado(int id_empleado)
         {
             DataTable dtEmpleado = new DataTable();                
@@ -46,10 +42,8 @@ namespace Copayment_prueba.DAL
                 emp.Activo = dtEmpleado.Rows[0]["Activo"].ToString();
                 return emp;
             }
-            else
-            {                
-                return emp;
-            }
+            else                    
+                return emp;            
         }
         public List<Empleado> obtenerEmpleados()
         {
@@ -95,6 +89,8 @@ namespace Copayment_prueba.DAL
                 return empleados;
             }
         }
+        #endregion
+        #region Crear empleado
         public string crearEmpleado(Empleado parametro)
         {
             try { 
@@ -123,6 +119,8 @@ namespace Copayment_prueba.DAL
                 return "Ha ocurrido un error: "+ex.Message.ToString();
             }
         }
+        #endregion
+        #region Actualizar empleado
         public string actualizarEmpleado(Empleado parametro)
         {
             try
@@ -154,7 +152,8 @@ namespace Copayment_prueba.DAL
                 return "Ha ocurrido un error: " + ex.Message.ToString();
             }
         }
-
+        #endregion
+        #region Eliminar empleado
         public string eliminarEmpleado(int id_emp)
         {
             Empleado emp = obtenerEmpleado(id_emp);
@@ -184,6 +183,7 @@ namespace Copayment_prueba.DAL
                 return "El empleado no existe";
             
         }
+        #endregion
     }
 }
 

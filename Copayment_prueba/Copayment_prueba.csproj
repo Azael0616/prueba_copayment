@@ -189,7 +189,9 @@
     <Compile Include="Controllers\DepartamentoController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="DAL\Bitacora_empleadoDAL.cs" />
     <Compile Include="DAL\EmpleadosDAL.cs" />
+    <Compile Include="Dtos\Bitacora_empleadoDTO.cs" />
     <Compile Include="Dtos\CalculoSalario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
