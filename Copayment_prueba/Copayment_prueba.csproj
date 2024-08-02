@@ -190,6 +190,7 @@
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DAL\Bitacora_empleadoDAL.cs" />
+    <Compile Include="DAL\DepartamentoDAL.cs" />
     <Compile Include="DAL\EmpleadosDAL.cs" />
     <Compile Include="Dtos\Bitacora_empleadoDTO.cs" />
     <Compile Include="Dtos\CalculoSalario.cs" />
