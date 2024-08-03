@@ -152,25 +152,32 @@ namespace Copayment_prueba.DAL
         #region Eliminar departamento
         public string eliminarDepartamento(int id)
         {
-            try
+            Departamento dep = obtenerDepartamento(id);
+            if (dep.Id_departamento > 0)
             {
-                using (MySqlConnection connection = new MySqlConnection(Utils.Utils.cadenaConexion()))
+                try
                 {
-                    using (MySqlCommand command = new MySqlCommand("eliminarDepartamento", connection))
+                    using (MySqlConnection connection = new MySqlConnection(Utils.Utils.cadenaConexion()))
                     {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@id", id);                        
-                        connection.Open();
-                        command.ExecuteNonQuery();
-                        connection.Close();
+                        using (MySqlCommand command = new MySqlCommand("eliminarDepartamento", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@id", id);
+                            connection.Open();
+                            command.ExecuteNonQuery();
+                            connection.Close();
+                        }
                     }
+                    return "Departamento eliminado correctamente";
                 }
-                return "Departamento eliminado correctamente";
+                catch (Exception ex)
+                {
+                    return "Ha ocurrido un error: " + ex.Message.ToString();
+                }
             }
-            catch (Exception ex)
-            {
-                return "Ha ocurrido un error: " + ex.Message.ToString();
-            }
+            else
+                return "El Departamento no existe";
+
         }
         #endregion
     }

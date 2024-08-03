@@ -1,0 +1,582 @@
+{
+	"info": {
+		"_postman_id": "d8ab1d07-af1c-4edb-b08a-36bd60139587",
+		"name": "Copayment_prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37393465"
+	},
+	"item": [
+		{
+			"name": "Iniciar_sesion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Nombre_usuario\": \"Azael16\",\r\n  \"Password\": \"Ax4040$$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/usuario/iniciarSesion",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"usuario",
+						"iniciarSesion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/empleado/obtenerEmpleado/{id}?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"empleado",
+						"obtenerEmpleado",
+						"{id}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_empleados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/empleado/obtenerEmpleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"empleado",
+						"obtenerEmpleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_departamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/departamento/obtenerDepartamento/{id}?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"departamento",
+						"obtenerDepartamento",
+						"{id}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_departamentos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/departamento/obtenerDepartamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"departamento",
+						"obtenerDepartamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_bitacoras_empleados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Fecha\": \"2024-08-01\",\r\n  \"Id_empleado\": 0,\r\n  \"Fecha_entrada\": \"\",\r\n  \"Fecha_salida\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/bitacoraempleado/obtenerBitacorasEmpleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"bitacoraempleado",
+						"obtenerBitacorasEmpleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_bitacora_empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Fecha\": \"\",\r\n  \"Id_empleado\": 1,\r\n  \"Fecha_entrada\": \"\",\r\n  \"Fecha_salida\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/bitacoraempleado/obtenerBitacoraEmpleado",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"bitacoraempleado",
+						"obtenerBitacoraEmpleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id_empleado\": 0,\r\n  \"Nombre\": \"string\",\r\n  \"App\": \"string\",\r\n  \"Apm\": \"string\",\r\n  \"Fecha_nacimiento\": \"2024-08-02T00:00:00.000Z\",\r\n  \"Sexo\": \"string\",\r\n  \"Departamento\": 0,\r\n  \"Telefono_contacto\": \"string\",\r\n  \"Correo_contacto\": \"string\",\r\n  \"Activo\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/empleado/crearEmpleado",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"empleado",
+						"crearEmpleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id_usuario\": 0,\r\n  \"Nombre_usuario\": \"Azael16\",\r\n  \"Password\": \"Ax4040$$\",\r\n  \"Activo\": \"S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/usuario/crearUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"usuario",
+						"crearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear_departamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id_departamento\": 0,\r\n  \"Nombre\": \"Prueba\",\r\n  \"Pago_hora\": 157.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/departamento/crearDepartamento",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"departamento",
+						"crearDepartamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar_empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id_empleado\": 0,\r\n  \"Nombre\": \"string\",\r\n  \"App\": \"string\",\r\n  \"Apm\": \"string\",\r\n  \"Fecha_nacimiento\": \"2024-08-02T00:00:00.000Z\",\r\n  \"Sexo\": \"string\",\r\n  \"Departamento\": 0,\r\n  \"Telefono_contacto\": \"string\",\r\n  \"Correo_contacto\": \"string\",\r\n  \"Activo\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/empleado/actualizarEmpleado",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"empleado",
+						"actualizarEmpleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar_departamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id_departamento\": 5,\r\n  \"Nombre\": \"Prueba actualizada\",\r\n  \"Pago_hora\": 299.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/departamento/actualizarDepartamento",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"departamento",
+						"actualizarDepartamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar_pago_hora",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Id_departamento\": 5,\r\n  \"Nombre\": \"\",\r\n  \"Pago_hora\": 199.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/departamento/actualizarPagoHora",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"departamento",
+						"actualizarPagoHora"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar_empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/empleado/eliminarEmpleado/{id}?id=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"empleado",
+						"eliminarEmpleado",
+						"{id}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar_departamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/departamento/eliminarDepartamento/{id)?id=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"departamento",
+						"eliminarDepartamento",
+						"{id)"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar_usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/usuario/eliminarUsuario/{nombre_usuario}?nombre_usuario=Javi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"usuario",
+						"eliminarUsuario",
+						"{nombre_usuario}"
+					],
+					"query": [
+						{
+							"key": "nombre_usuario",
+							"value": "Javi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar_salida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Fecha\": \"2024-08-02T06:11:03.122Z\",\r\n  \"Id_empleado\": 1,\r\n  \"Fecha_entrada\": \"\",\r\n  \"Fecha_salida\": \"2024-08-02T06:11:03.122Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/bitacoraempleado/registrarSalida",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"bitacoraempleado",
+						"registrarSalida"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar_entrada",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Fecha\": \"2024-08-02T06:14:14.515Z\",\r\n  \"Id_empleado\": 1,\r\n  \"Fecha_entrada\": \"\",\r\n  \"Fecha_salida\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/bitacoraempleado/registrarEntrada",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"bitacoraempleado",
+						"registrarEntrada"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calcular_salario_diario_individual",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Fecha\": \"2024-08-01\",\r\n  \"Id_empleado\": 1,\r\n  \"Fecha_entrada\": \"\",\r\n  \"Fecha_salida\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/bitacoraempleado/calcularSalarioDiarioIndividual",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"bitacoraempleado",
+						"calcularSalarioDiarioIndividual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calcular_todo_salario_diario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Fecha\": \"2024-08-01\",\r\n  \"Id_empleado\": 0,\r\n  \"Fecha_entrada\": \"\",\r\n  \"Fecha_salida\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/bitacoraempleado/calcularTodoSalarioDiario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"bitacoraempleado",
+						"calcularTodoSalarioDiario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
